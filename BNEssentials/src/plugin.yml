@@ -1,0 +1,28 @@
+name: BNEssentials
+description: Essential stuff for Bladenode server
+author: Emil Ekstrom aka Uncle_Emil. On bukkit forums known as Ekstemi
+website: http://bladenode.net & http://ekstemicraft.com
+main: net.bladenode.plugins.BNEssentials
+version: 0.1
+commands:
+   sync:
+      description: Sync player group to forum.
+      usage: /<command> [player]
+   verify:
+      description: Verify player registration
+      usage: /<command>
+   savebook:
+      description: Save book as .yml
+      usage: /<command>
+   book:
+      description: Spawn in specific book
+      usage: /<command>
+   booklist:
+      description: See available books
+      usage: /<command>
+permissions:
+    bnessentials.savebook:
+        description: Save book to file
+
+  
+  

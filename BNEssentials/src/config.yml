@@ -1,0 +1,5 @@
+####BladeNode's Own Essential Stuff plugin!
+
+##Rule Book at first spawn
+#Name of Book to put into player inventory on first spawn. Must be CASE-sensitive!
+BookName: fuck
