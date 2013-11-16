@@ -29,10 +29,7 @@ package net.bladenode.plugins;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-
-
 import net.bladenode.plugins.listeners.BNEListener;
-
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -56,6 +53,8 @@ public static BNEssentials main; //This makes sure I can access plugin.etcblah u
 		//Enabling/registering  Listeners
 		PluginManager pm = Bukkit.getServer().getPluginManager();
 				pm.registerEvents(new BNEListener(null), this);
+				pm.registerEvents(new BNEListener(this), this);
+
 
 		//Setting BNEssentialsCommandExecutorBooks as the... CommandExecutor!
 

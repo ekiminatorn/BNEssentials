@@ -3,3 +3,14 @@
 ##Rule Book at first spawn
 #Name of Book to put into player inventory on first spawn. Must be CASE-sensitive!
 BookName: fuck
+#######
+
+#This is for the colored tags
+staffs:
+- goth_killer
+- hunter376398
+- okin336
+- Stavrikiosi
+#This is for the colored tags
+admins:
+- Ekstemi
