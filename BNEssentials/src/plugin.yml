@@ -20,6 +20,9 @@ commands:
    booklist:
       description: See available books
       usage: /<command>
+   hub:
+      description: Hub
+      usage: /<command>
 permissions:
     bnessentials.savebook:
         description: Save book to file

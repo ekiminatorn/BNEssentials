@@ -29,7 +29,11 @@ package net.bladenode.plugins;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+
+import net.bladenode.plugins.listeners.BNEInventoryClickListener;
 import net.bladenode.plugins.listeners.BNEListener;
+import net.bladenode.plugins.listeners.TagListener;
+
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -53,7 +57,8 @@ public static BNEssentials main; //This makes sure I can access plugin.etcblah u
 		//Enabling/registering  Listeners
 		PluginManager pm = Bukkit.getServer().getPluginManager();
 				pm.registerEvents(new BNEListener(null), this);
-				pm.registerEvents(new BNEListener(this), this);
+				pm.registerEvents(new BNEInventoryClickListener(null), this);
+				pm.registerEvents(new TagListener(), this);
 
 
 		//Setting BNEssentialsCommandExecutorBooks as the... CommandExecutor!
@@ -61,6 +66,7 @@ public static BNEssentials main; //This makes sure I can access plugin.etcblah u
 		getCommand("savebook").setExecutor(new BNEssentialsCommandExecutorBooks(this));
 		getCommand("book").setExecutor(new BNEssentialsCommandExecutorBooks(this));
 		getCommand("booklist").setExecutor(new BNEssentialsCommandExecutorBooks(this));
+		getCommand("hub").setExecutor(new BNEssentialsCommandExecutorWarpHub());
 	/*
 		Config file
 		File file = new File(getDataFolder() + File.separator + "config.yml");
