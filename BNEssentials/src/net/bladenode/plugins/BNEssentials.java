@@ -24,6 +24,14 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
 
+/*TODO
+ * 1.Add actions to the items (Warping when clicked on some item)
+ * 2. If I bother, add a feature where the inventory can have two same items, but when clicked on them, it won't glitch out.
+ * 
+ */
+
+
+
 package net.bladenode.plugins;
 
 import java.io.File;
@@ -35,6 +43,7 @@ import net.bladenode.plugins.listeners.BNEListener;
 import net.bladenode.plugins.listeners.TagListener;
 
 import org.bukkit.Bukkit;
+import org.bukkit.configuration.Configuration;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -42,10 +51,12 @@ import org.bukkit.plugin.java.JavaPlugin;
 public final class BNEssentials extends JavaPlugin{
 
 
-	
+
+	public static Configuration config;
 	public static File saveDir;
 	
 	public static ArrayList<BNEBooks> books = new ArrayList<BNEBooks>();
+
 	
 	
 public static BNEssentials main; //This makes sure I can access plugin.etcblah using <classname>.main in other classes.
@@ -66,7 +77,8 @@ public static BNEssentials main; //This makes sure I can access plugin.etcblah u
 		getCommand("savebook").setExecutor(new BNEssentialsCommandExecutorBooks(this));
 		getCommand("book").setExecutor(new BNEssentialsCommandExecutorBooks(this));
 		getCommand("booklist").setExecutor(new BNEssentialsCommandExecutorBooks(this));
-		getCommand("hub").setExecutor(new BNEssentialsCommandExecutorWarpHub());
+		getCommand("hub").setExecutor(new BNEssentialsCommandExecutorWarpHub(this));
+		getCommand("forloop").setExecutor(new BNEssentialsCommandExecutorWarpHub(this)); //Temp command for testing purposes
 	/*
 		Config file
 		File file = new File(getDataFolder() + File.separator + "config.yml");
@@ -84,14 +96,18 @@ public static BNEssentials main; //This makes sure I can access plugin.etcblah u
 
 		}
 */
-saveDefaultConfig();
+	
+	//Initialize fake GUI
+	BNEssentialsCommandExecutorWarpHub warp = new BNEssentialsCommandExecutorWarpHub(this);
+	warp.initFakeGui();
+	
+	//Get latest version from the config in the jar	
+	saveDefaultConfig();
 
-
-		
 	initSaveFile();
 	
 	
-	//Bookstuff
+	//Load books
 	try {
 	 	books = BNEBooks.loadBooks();
 	} catch (FileNotFoundException e) {
@@ -115,6 +131,6 @@ saveDefaultConfig();
 		saveDir.mkdirs();
 	}
 	
-	
+
 	
  }

@@ -23,6 +23,9 @@ commands:
    hub:
       description: Hub
       usage: /<command>
+   forloop:
+      description: Temp command for testing
+      usage: /<command>
 permissions:
     bnessentials.savebook:
         description: Save book to file

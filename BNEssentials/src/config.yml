@@ -5,12 +5,44 @@
 BookName: fuck
 #######
 
-#This is for the colored tags
-staffs:
-- goth_killer
-- hunter376398
-- okin336
-- Stavrikiosi
-#This is for the colored tags
-admins:
-- Ekstemi
+#Colourtags for Staff and Admins
+colourtags:
+  staffs:
+  - goth_killer
+  - hunter376398
+  - okin336
+  - Stavrikiosi
+  admins:
+  - Ekstemi
+####
+###WARP GUI ITEMS INFORMATION
+#guiname: The name the GUI has
+#totalslots: if there is more than 9 slots in use, put this value to 18 and if 18 slots is in use, put 36
+#slot<numberhere>: This is the slots, zero is the leftmost, and one is the next one from the zero slot.
+#warp: Specify the warppoint you want the users to TP to. NOTE!! Warp needs to exist!
+#item: item you want in the slot to appear, must be itemID.
+#lore_title: Title for the item when you hover over it.
+#line<numberhere>: You can write more information here, you can have unlimited with lines, just make sure the line number increments every time.
+#Color codes are supported! use & and whatever colornumber you want.
+#Worth Noting:
+#Each slot should have a DIFFERENT item, otherwise it'll glitch. If it's really needed to have two of same item in the slots, i'll probably
+#add a feature to recognize correctly the two items.
+###
+gui:
+  guiname: Awesome
+  totalslots: 9
+  slots:
+    slot0:
+      warp: "warpname"
+      item: 9
+      lore_title: "Testing title"
+      lore_lines:
+        line0: "line1!"
+        line1: "line2!"
+    slot1:
+      warp: "warpname"
+      item: 10
+      lore_title: "Testing title1"
+      lore_lines:
+        line0: "line1!!"
+        line1: "line2!!"
