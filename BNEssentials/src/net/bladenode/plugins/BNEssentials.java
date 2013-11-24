@@ -30,7 +30,7 @@ THE SOFTWARE.
  * 
  */
 
-//Testing branches
+//Testing branches. Will do my development stuff on dev, and push successful stuff into master! :)
 
 
 package net.bladenode.plugins;
