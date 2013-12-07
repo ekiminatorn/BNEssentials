@@ -4,6 +4,8 @@ author: Emil Ekstrom aka Uncle_Emil. On bukkit forums known as Ekstemi
 website: http://bladenode.net & http://ekstemicraft.com
 main: net.bladenode.plugins.BNEssentials
 version: 0.1
+softdepend: [TagAPI]
+loadbefore: [TagAPI]
 commands:
    sync:
       description: Sync player group to forum.
