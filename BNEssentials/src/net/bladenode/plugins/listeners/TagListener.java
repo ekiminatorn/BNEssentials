@@ -18,8 +18,8 @@ public class TagListener implements Listener{
 				
 	}
 	
-	@EventHandler
-	public void onNameTag(PlayerReceiveNameTagEvent event) {
+/*	@EventHandler
+ 	public void onNameTag(PlayerReceiveNameTagEvent event) {
 		
 		
 		//Staff tag coloring
@@ -34,7 +34,7 @@ public class TagListener implements Listener{
 			if(event.getNamedPlayer().getName().equalsIgnoreCase(name)){
 				event.setTag(ChatColor.DARK_RED + event.getNamedPlayer().getName());
 			}
-		}
+		} */
 		
 		
 	//Removed the hardcoded stuff, and now loops through the config file for the names.
@@ -62,5 +62,5 @@ public class TagListener implements Listener{
 		}
 	*/	
 	}	
-}
+
 

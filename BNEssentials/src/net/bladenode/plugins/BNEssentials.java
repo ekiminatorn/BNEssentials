@@ -70,7 +70,7 @@ public static BNEssentials main; //This makes sure I can access plugin.etcblah u
 		PluginManager pm = Bukkit.getServer().getPluginManager();
 				pm.registerEvents(new BNEListener(null), this);
 				pm.registerEvents(new BNEInventoryClickListener(null), this);
-				pm.registerEvents(new TagListener(), this);
+				//pm.registerEvents(new TagListener(), this);
 
 
 		//Setting BNEssentialsCommandExecutorBooks as the... CommandExecutor!
