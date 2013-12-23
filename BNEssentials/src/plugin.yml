@@ -28,8 +28,19 @@ commands:
    forloop:
       description: Temp command for testing
       usage: /<command>
+   event:
+      description: Teleports user to open server event
+      usage: /<command>
+   startevent:
+      description: Starts a server event
+      usage: /<command>
+   stopevent:
+      description: Stops running event
+      usage: /<command>
 permissions:
     bnessentials.savebook:
+        description: Save book to file
+    bnessentials.command.startevent:
         description: Save book to file
 
   

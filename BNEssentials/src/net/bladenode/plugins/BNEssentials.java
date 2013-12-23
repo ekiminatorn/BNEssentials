@@ -41,8 +41,6 @@ import java.util.ArrayList;
 
 import net.bladenode.plugins.listeners.BNEInventoryClickListener;
 import net.bladenode.plugins.listeners.BNEListener;
-import net.bladenode.plugins.listeners.TagListener;
-
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.Configuration;
 import org.bukkit.plugin.PluginManager;
@@ -80,6 +78,10 @@ public static BNEssentials main; //This makes sure I can access plugin.etcblah u
 		getCommand("booklist").setExecutor(new BNEssentialsCommandExecutorBooks(this));
 		getCommand("hub").setExecutor(new BNEssentialsCommandExecutorWarpHub(this));
 		getCommand("forloop").setExecutor(new BNEssentialsCommandExecutorWarpHub(this)); //Temp command for testing purposes
+		//Event commands
+		getCommand("event").setExecutor(new BNEssentialsCommandExecutorEvents(this));
+		getCommand("startevent").setExecutor(new BNEssentialsCommandExecutorEvents(this));
+		getCommand("stopevent").setExecutor(new BNEssentialsCommandExecutorEvents(this));
 	/*
 		Config file
 		File file = new File(getDataFolder() + File.separator + "config.yml");
